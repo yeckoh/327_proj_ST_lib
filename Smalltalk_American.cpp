@@ -7,10 +7,10 @@
 using namespace std;
 
 Smalltalk_American::Smalltalk_American(int iPerson) : Smalltalk(AMERICAN, iPerson) {
+	populatePhrases();
 }
 
-Smalltalk_American::Smalltalk_American(string myNationality, int iPerson) : Smalltalk(myNationality, iPerson) {
-}
+Smalltalk_American::Smalltalk_American(string myNationality, int iPerson) : Smalltalk(myNationality, iPerson) {}
 
 Smalltalk_American::~Smalltalk_American(void) {
 

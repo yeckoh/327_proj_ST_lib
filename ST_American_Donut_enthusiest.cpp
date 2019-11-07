@@ -13,6 +13,7 @@
 using namespace std;
 
 ST_American_DonutEnthusiest::ST_American_DonutEnthusiest(int i) : Smalltalk_American(AMERICAN_DE, i) {
+	populatePhrases();
 }
 
 ST_American_DonutEnthusiest::~ST_American_DonutEnthusiest(void) {
@@ -24,7 +25,7 @@ ST_American_DonutEnthusiest::~ST_American_DonutEnthusiest(void) {
 //the end result is mySmallTalk will contain first the base class phrases and
 //then this classes phrases
 void ST_American_DonutEnthusiest::populatePhrases() {
-	this->populatePhrases();
+	this->Smalltalk_American::populatePhrases();
 
 	this->mySmallTalk.push_back(AMERICAN_DE_PHRASE_1);
 	this->mySmallTalk.push_back(AMERICAN_DE_PHRASE_2);
