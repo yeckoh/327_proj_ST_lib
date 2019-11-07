@@ -52,13 +52,14 @@ vector<unique_ptr<Smalltalk>> getPeople(int numBrit,
 	}
 
 		//create some watches (as long as number watches <= numb people)
+	if(numWatches > people.size())
+		numWatches = people.size();
 		//then give the watches away to first NUM_WATCHES people in the vector
-//	if(numWatches > people.size())
-//		numWatches = people.size();
-	unique_ptr<Watch> handout;
-	for(int i = 0; i < numWatches && i < people.size(); ++i) {
-		handout = std::unique_ptr<Watch>(new Watch());
-		people[i]->giveWatch(handout);
+
+	unique_ptr<Watch>* handout;
+	for(int i = 0; i < numWatches; ++i) {
+		handout = new unique_ptr<Watch>(new Watch());
+		people[i]->giveWatch(*handout);
 		//people[i]->giveWatch(std::unique_ptr<Watch>(new Watch()));
 	}
 

@@ -48,7 +48,7 @@ Smalltalk::~Smalltalk(void) {
 	//if already have a watch then return false and dont change pWatch pointer
 	//otherwise accept watch (return true) and set this->pWatch=pWatch (use std::move)
 	bool Smalltalk::giveWatch(unique_ptr<Watch> &pWatch) {
-		if(pWatch)
+		if(!pWatch)
 			return false;
 		this->pWatch = move(pWatch);
 		return true;
