@@ -20,10 +20,9 @@ Smalltalk::~Smalltalk(void) {
 }
 
 	string Smalltalk::saySomething() {
-		string app = nationality + " " + to_string(iPerson) + ':' + mySmallTalk[current_phrase++];
 		if(current_phrase == mySmallTalk.size())
 			current_phrase = 0;
-		return app;
+		return nationality + " " + to_string(iPerson) + ':' + mySmallTalk[current_phrase++];
 	}
 
 	string Smalltalk::getTime() {
