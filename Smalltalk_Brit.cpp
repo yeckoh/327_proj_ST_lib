@@ -1,8 +1,10 @@
 /*
- * Smalltalk_Brit.cpp
- *
- *  Created on: Nov 7, 2019
- *      Author: wc
+ *       File: Smalltalk_Brit.cpp
+ *    Project: cs327 p5 - obj hierarchies, std_ptrs, ABCs
+ *       Prof: K. Perkins @ CNU
+ * Created on: Nov 7, 2019
+ *     Author: wchang 00960978
+ *  LModified: Nov 7, 2019
  */
 
 #include <string>
@@ -17,9 +19,7 @@ Smalltalk_Brit::Smalltalk_Brit(int iPerson) : Smalltalk(BRIT, iPerson) {
 	populatePhrases();
 }
 
-Smalltalk_Brit::~Smalltalk_Brit(void){
-
-}
+Smalltalk_Brit::~Smalltalk_Brit(void) {}
 
 void Smalltalk_Brit::populatePhrases() {
 	this->mySmallTalk.clear();
